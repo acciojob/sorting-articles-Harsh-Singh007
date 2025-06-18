@@ -8,11 +8,11 @@
       font-family: Arial, sans-serif;
       padding: 2rem;
     }
-    ul#band {
+    ul#bands {
       list-style: none;
       padding: 0;
     }
-    ul#band li {
+    ul#bands li {
       padding: 5px 0;
     }
   </style>
@@ -20,7 +20,7 @@
 <body>
 
   <h1>Band List (Sorted Alphabetically)</h1>
-  <ul id="band"></ul>
+  <ul id="bands"></ul>
 
   <script>
     const bands = [
@@ -39,7 +39,7 @@
       return nameA.localeCompare(nameB);
     });
 
-    const ul = document.getElementById('band');
+    const ul = document.getElementById('bands');
     ul.innerHTML = sortedBands.map(band => `<li>${band}</li>`).join('');
   </script>
 
